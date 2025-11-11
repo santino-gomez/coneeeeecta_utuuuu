@@ -1,0 +1,511 @@
+/*
+    paleta de colores:
+    blanco #f4f4f4
+    celeste #89bcdb
+    azul oscuro #2d3033
+    negro #0e0e0e
+    gris #afafaf
+*/
+
+@font-face {
+    font-family: 'gravityRegular';
+    src: url(../fonts/Gravity-Regular.otf);
+}
+
+@font-face {
+    font-family: 'gravityLight';
+    src: url(../fonts/Gravity-Light.otf);
+}
+
+* {
+    font-family: 'gravityLight';
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: medium;
+}
+
+body {
+    background-color: #000000;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.antiAStyle {
+    text-decoration: none;
+    color: inherit;
+}
+
+.imagotipo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.isotipo {
+    width: 48px;
+    height: auto;
+    margin-left: 0;
+    margin-right: 0;
+    margin: auto;
+}
+
+.logotipo {
+    font-size: 24px;
+    font-family: 'gravityRegular';
+}
+
+.header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 4px 16px;
+    background-color: #0e0e0e;
+    border-bottom: #f4f4f4 1px solid;
+    color: #afafaf;
+    font-size: 8px;
+    padding-top: 16px;
+    z-index: 100;
+    gap: 12px;
+}
+
+.headerIzquierda,
+.headerCentro,
+.headerDerecha {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin: 8px;
+}
+
+.headerCentro {
+    flex: 1;
+    justify-content: center;
+    flex-direction: column;
+    cursor: default;
+}
+
+.headerDerecha {
+    justify-content: flex-end;
+}
+
+.elementoHeader {
+    border: #afafaf80 1px solid;
+    border-radius: 10px;
+    padding: 12px;
+    width: 100%;
+}
+
+.textoHeader {
+    font-size: 12px;
+    color: #f4f4f4;
+    transition: 0.1s ease-out;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 2px;
+}
+
+.textoHeader:hover {
+    background-color: #afafaf80;
+    transition: 0.2s ease-in;
+}
+
+.elementoHeaderFlex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+
+.headerElementos {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 5px;
+}
+
+/*iconos*/
+
+.headerIcono {
+    background-color: #f4f4f400;
+    padding: 4px;
+    border-radius: 50%;
+    transition: 0.1s ease-in;
+    height: 54px;
+    width: 54px;
+}
+
+.pagina {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; 
+}
+
+.foros {
+    padding-top: 80px;
+    flex: 1;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-left: 200px;
+}
+
+/*notificaciones*/
+
+.notificaciones {
+    position: relative;
+    display: inline-block;
+}
+
+.notificacionesContenido {
+    display: none;
+    position: absolute;
+    min-height: 60px;
+    width: 360px;
+    font-size: 12px;
+    transform: translate(-300px, 15px);
+    background-color: #2d3033;
+    min-width: 160px;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 1;
+}
+
+.mostrar {
+    display: block;
+}
+
+.notificacion {
+    background-color: #0e0e0e80;
+    border-radius: 10px;
+    display: flex;
+    padding: 8px;
+}
+
+.imagenNotificacion {
+    height: 38px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.tituloNotificacion {
+    margin-left: 10px;
+    color: #f4f4f4;
+}
+
+.resumenNotificacion {
+    margin-left: 10px;
+    color: #afafaf;
+}
+
+.flexRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+/* paneles */
+
+.paneles {
+    background-color: #2d3033;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    padding: 8px;
+    padding-left: 200px;
+    box-shadow: 0px 5px 10px 0px #2d303380;
+}
+
+.paneles h4 {
+    color: #afafaf;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+.paneles h4:hover {
+    color: #f4f4f4;
+    transition: 0.2s ease-out;
+}
+
+/* foros */
+
+.forosPost {
+    display: flex;
+    background-color: #0e0e0e;
+    border-radius: 9px;
+    width: min(95%, 950px);
+    height: auto;
+    padding: 16px;
+    flex-direction: row;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.postImagenes {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+    gap: 8px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.forosPost img {
+    margin-top: 10px;
+    max-width: 200px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 15px;
+    
+}
+
+.infoPost p {
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.votosPost {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 14px;
+    height: fit-content;
+    margin-left: auto;
+}
+
+.votosPost svg {
+    cursor: pointer;
+}
+
+.votosPost svg:hover {
+    transform: scale(1.2);
+    transition: 0.1s ease-in;
+}
+
+.accionesPost {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.accionesPost div {
+    background-color: #2d3033;
+    color: #f4f4f4;
+    padding: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.accionesPost div:hover {
+    background-color: #afafaf;
+    color: #0e0e0e;
+    transition: 0.2s;
+}
+
+.usuarioPost {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.usuarioPost img {
+    width: 36px;
+    border-radius: 50%;
+    align-items: center;
+    margin-top: 0px;
+}
+
+.alinearUser {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+}
+
+.irLlamado {
+    margin: 5px;
+    background-color: #f4f4f4;
+    color: #2d3033;
+    border-radius: 10px;
+    padding: 8px;
+    padding-inline: 20px;
+    width: fit-content;
+    height: fit-content;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.1s ease-in;
+}
+
+.irLlamado:hover {
+    background-color: #0e0e0e;
+    color: #f4f4f4;
+    transition: 0.2s ease-out;
+}
+
+.post ul {
+    margin-left: 20px;
+}
+
+/* javascript */
+
+/* responsive */
+
+@media (max-width: 768px) {
+    .foros {
+        padding-top: 125px;
+    }
+
+    .paneles {
+        transform: translateY(60px);
+        font-size: 10px;
+        gap: 50px ;
+    }
+
+    .headerIcono, .crearHeader {
+        gap: 10px;
+    }
+
+    .logoHeader {
+        width: 24px;
+        height: 24px;
+    }
+
+    .header {
+        height: 60px;
+    }
+
+    .isotipo {
+        width: 48px;
+        height: auto;
+        margin-left: 0;
+        margin-right: 0;
+        margin: auto;
+    }
+
+    .logotipo {
+        font-size: 24px;
+        font-family: 'gravityRegular';
+    }
+
+    .forosPost {
+        flex-direction: column;
+        width: min(95%, 600px);
+        font-size: smaller;
+    }
+
+    .votosPost {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 4px;
+        padding: 6px;
+        padding-left: 50px;
+        padding-right: 50px;
+        background-color: #e0e0e0;
+        border-radius: 10px;
+        font-size: 14px;
+        height: fit-content;
+        width: 100%;
+        margin-left: auto;
+    }
+
+    .forosPost img {
+        max-width: 100%;
+    }
+
+    .postImagenes {
+        width: 50%;
+        margin: auto;
+    }
+
+    .siResponsivo {
+        font-size: 32px;
+    }
+
+    .responsivoSiONo {
+        display: none;
+    }
+}
+
+.espacioFooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+}
+
+.footer {
+    color: #2d3033;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+}
+
+.usuarioContenido{
+    display: none !important;
+    position: absolute;
+    
+    width: max-content; 
+    max-width: 90vw; /* hace que no sea mas ancho que la ventana */
+    
+    font-size: 14px;
+    /* Despapumiento vertical para que quede debajo de la navbar :v */
+    transform: translate(20px, 175px); 
+    
+    background-color: #2d3033;
+    box-shadow: 0 0 20px 5px rgba(0,0,0,.2);
+    border-radius: 10px;
+    padding: 15px;
+    z-index: 99999; /* prioridad al momento de ver los objetos es como trabajar en capas la navbar tiene una prioridad de 90000*/
+    right: 0;  /* hace que el panel se alinee a la derecha de la pantalla  aunque lo puse por que no sabia como resolver un problema*/
+    
+}
+
+/* lo que tiene adentro sus colores y bla bla bla  */
+    
+.usuarioContenido p { margin:10px 0; } 
+.usuarioContenido a { color:#f4f4f4; text-decoration:none; } 
+.usuarioContenido a :hover{ color:#89bcdb; }
+
+/*  JS  clase */
+.usuarioContenido.is-open{
+    display: block !important;
+}

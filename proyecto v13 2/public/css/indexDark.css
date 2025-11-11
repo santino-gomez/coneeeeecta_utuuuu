@@ -1,0 +1,276 @@
+/*
+    paleta de colores:
+    blanco #f4f4f4
+    celeste #89bcdb
+    azul oscuro #2d3033
+    negro #0e0e0e
+    gris #afafaf
+*/
+
+@font-face {
+    font-family: 'gravityRegular';
+    src: url(../fonts/Gravity-Regular.otf);
+}
+
+@font-face {
+    font-family: 'gravityLight';
+    src: url(../fonts/Gravity-Light.otf);
+}
+
+* {
+    font-family: 'gravityLight';
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: medium;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000000;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.responsivo {
+    overflow: hidden;
+}
+
+input {
+    border: none;
+    background-color: #0e0e0e;
+    color: #afafaf;
+    text-decoration: none;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    width: 500px;
+    border-radius: 5px;
+}
+
+.flexBody {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.extra {
+    padding: 10px;
+    height: 100vh;
+    width: 50%;
+    background-color: #0e0e0e;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    border-radius: 2.5% 0 0 2.5% ;
+    box-shadow: -6px -6px 10px 5px #310d3f30;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.extraH1 {
+    text-align: center;
+    margin-top: 2.5vh;
+}
+
+.extra p {
+    margin: 5px;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 25px;
+}
+
+.miniDescsFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.miniDescs {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+}
+
+.miniDescs img {
+    width: 48px;
+    height: auto;
+    display: flex;
+}
+
+.miniDescs p {
+    font-size: 12px;
+}
+
+.miniDesc {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    vertical-align: center;
+    width: auto;
+    margin: 10px;
+    gap: 10px;    
+}
+
+.footerPagina {
+    text-align: center;
+    font-size: 10px;
+    margin-top: 20px;
+    margin-bottom: 2.5vh;
+}
+
+.pagina {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+    margin-right: 0;
+    margin: auto;
+}
+
+.fondoPagina {
+    background-color: #0e0e0e;
+    color: #f4f4f4;
+    border-radius: 15px;
+    box-shadow: 6px 6px 10px 5px #310d3f30;
+    padding: 20px;
+    max-width: 95vw;
+    max-height: 95vh;
+}
+
+.imagotipo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.isotipo {
+    width: 48px;
+    height: auto;
+    margin-left: 0;
+    margin-right: 0;
+    margin: auto;
+}
+
+.logotipo {
+    font-size: 18px;
+    font-family: 'gravityRegular';
+}
+
+.contenido1 {
+    margin: 15px;
+    text-align: center;
+}
+
+.botones {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.botones button {
+    background-color: #f4f4f4;
+    color: #2d3033;
+    height: 40px;
+    width: 50%;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 10px;
+    border: none;
+    transition: 0.1s ease-in;
+    cursor: pointer;
+    width: 140px;
+}
+
+.botones a {
+    text-decoration: none;
+}
+
+.botones button:hover {
+    background-color: #0e0e0e;
+    transition: 0.3s ease-out;
+}
+
+@media (max-width: 1280px) {
+    .responsivoBro {
+        overflow-y: visible ;
+    }
+    
+    .miniDescs img {
+        width: 48px;
+    }
+    .miniDescs p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .extraH1 {
+        text-align: center;
+        margin-top: 25px;
+    }
+
+    body {
+        overflow: auto;
+    }
+
+    .flexBody {
+        flex-direction: column-reverse;
+    }
+
+    .extra {
+        width: 100%;
+        height: auto;
+        border-radius: 15px 15px 0 0;
+        box-shadow: none;
+        justify-content: none;
+        padding-top: 0px;
+        padding-bottom: 20px;
+    }
+
+    .miniDescsFlex {
+        width: 100%;
+    }
+
+    .pagina {
+        width: 100%;
+        height: 70vh;
+        margin: 0;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .botones button {
+        width: 100%;
+    }
+
+    .miniDescs p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    * {
+        font-size: small;
+    }
+}
+
+@media (max-height: 450px) {
+    .pagina {
+        height: 100vh;
+    }
+
+    .isotipo {
+        width: 32px;
+    }
+
+    .logotipo {
+        font-size: 16px;
+    }
+}

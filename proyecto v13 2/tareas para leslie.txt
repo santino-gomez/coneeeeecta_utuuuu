@@ -1,0 +1,10 @@
+inicio sesión empresas (hecho, falta backend) //backend designado a lucca 🙏🙏
+achicar el header (hecho)
+tema oscuro (en proceso)
+pagina de ajustes
+página para crear posts
+terminar de linkear el perfil a php
+tema de pasantias
+achicar el index
+logo de thinkgear
+que la página quede bien

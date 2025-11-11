@@ -1,0 +1,124 @@
+
+
+.perfilWrap{
+  max-width: 1100px;
+  margin: 0 auto;        /* centrado qliador */
+  padding: 0 18px 40px;  /* el padding-top lo pone JS  */
+}
+ 
+/* contendedor del perfil */
+.perfilCard {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  padding: 22px;
+  margin-top: 16px; /* espacio de seguridad */
+}
+
+/* palte de arriba del perfil */
+.perfilHead {
+  display: grid;
+  grid-template-columns: 120px 1fr auto;
+  gap: 18px;
+  align-items: center;
+}
+
+.perfilAvatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 999px;
+  object-fit: cover;
+  background: #ddd;
+}
+
+.perfilName {
+  margin: 0 0 6px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.perfilUser {
+  margin: 0 0 10px;
+  color: #6b6b6b;
+}
+
+/* etiquetas osea tags */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chips .chip {
+  background: #efe9e6;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+/* Botón pa edital mi loco  */
+.btnEdit {
+  text-decoration: none;
+  background: #111;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 11px;
+  font-weight: 600;
+  transition: transform .06s ease;
+  white-space: nowrap;
+}
+
+/* 1. Ocultar el panel por defecto */
+.usuarioContenido {
+    display: none; /* Asegura que no se vea cuando no está abierto */
+    position: absolute; /* Es esencial para que el menú flote */
+    /* Añade aquí estilos como background-color, padding, border, box-shadow */
+}
+
+/* 2. Mostrar el panel cuando se hace clic */
+.usuarioContenido.is-open {
+    display: block; /* O flex, según necesites para el diseño interno */
+}
+
+/* Cuerpo */
+.perfilBody {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+
+
+.bio {
+  white-space: pre-wrap;
+  font-size: 15px;
+  color: #333;
+}
+
+
+
+/* Responsive */
+@media (max-width: 900px) {
+  .perfilHead {
+    grid-template-columns: 84px 1fr;
+  }
+
+  .perfilAvatar {
+    width: 84px;
+    height: 84px;
+  }
+
+  .btnEdit {
+    grid-column: 1 / -1;
+    justify-self: start;
+    margin-top: 8px;
+  }
+
+  .perfilBody {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+  

@@ -1,0 +1,228 @@
+/*
+    paleta de colores:
+    blanco #f4f4f4
+    celeste #89bcdb
+    azul oscuro #2d3033
+    negro #0e0e0e
+    gris #afafaf
+*/
+
+@font-face {
+    font-family: 'gravityRegular';
+    src: url(../fonts/Gravity-Regular.otf);
+}
+
+@font-face {
+    font-family: 'gravityLight';
+    src: url(../fonts/Gravity-Light.otf);
+}
+
+* {
+    font-family: 'gravityLight';
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: medium;
+}
+
+body {
+    background-color: #f4f4f4;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.responsivoBro {
+    overflow: hidden;
+}
+
+input {
+    border: none;
+    background-color: #afafaf;
+    color: #0e0e0e;
+    text-decoration: none;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    width: min(500px, 90%);
+    border-radius: 5px;
+}
+
+.flexBody {
+    display: flex;
+    flex-direction: row;
+}
+
+.extra {
+    padding: 10px;
+    height: 100vh;
+    width: 50%;
+    background-color: #0e0e0e;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #f4f4f4;
+    border-radius: 0 2.5% 2.5% 0;
+    box-shadow: 6px 6px 10px 5px #310d3f30;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.formRegistro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.extraH1 {
+    text-align: center;
+    margin-top: 2.5vh;
+}
+
+.extra p {
+    margin: 5px;
+    text-align: center;
+    font-size: small;
+    margin-top: 25px;
+}
+
+.miniDescsFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.miniDescs {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+}
+
+.miniDescs img {
+    width: 64px;
+    height: auto;
+    display: flex;
+}
+
+.miniDescs p {
+    font-size: 16px;
+}
+
+.miniDesc {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    width: auto;
+}
+
+.footerPagina {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom: 2.5vh;
+}
+
+.pagina {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+    margin-right: 0;
+    margin: auto;
+}
+
+.fondoPagina {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 6px 6px 10px 5px #310d3f30;
+    padding: 20px;
+    max-width: 95vw;
+    max-height: 95vh;
+}
+
+.imagotipo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.isotipo {
+    width: 48px;
+    height: auto;
+    margin-left: 0;
+    margin-right: 0;
+    margin: auto;
+}
+
+.logotipo {
+    font-size: 24px;
+    font-family: 'gravityRegular';
+}
+
+.contenido1 {
+    margin: 30px;
+    text-align: center;
+}
+
+.botones {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cicada3301 {
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    color: #2d3033;
+}
+
+.godFace {
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    gap: 50%;
+    justify-content: center;
+}
+
+.botones button {
+    background-color: #2d3033;
+    color: #f4f4f4;
+    height: 40px;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 10px;
+    border: none;
+    transition: 0.1s ease-in;
+    cursor: pointer;
+    width: 140px;
+}
+
+.botones a {
+    text-decoration: none;
+}
+
+.botones button:hover {
+    background-color: #0e0e0e;
+    transition: 0.3s ease-out;
+}
+
+@media (max-width: 1280px) {
+    .miniDescs img {
+        width: 48px;
+    }
+    .miniDescs p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    * {
+        font-size: small;
+    }
+}

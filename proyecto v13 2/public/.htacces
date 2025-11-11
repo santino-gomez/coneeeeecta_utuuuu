@@ -1,0 +1,11 @@
+# .htaccess dentro de la carpeta public/
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+   
+    RewriteBase /proyecto v10 2 MVC/public/
+    RewriteCond %{REQUEST_FILENAME} !-f
+    # Y si la solicitud no es un directorio real
+    RewriteCond %{REQUEST_FILENAME} !-d
+    # ...entonces, reescribe la URL y carga index.php
+    RewriteRule ^(.*)$ index.php [QSA,L]
+</IfModule>
