@@ -1,15 +1,21 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const boton = document.getElementById('redirigirRegistro');
+document.addEventListener('DOMContentLoaded', () => {
+    const registro = document.getElementById('redirigirRegistro');
+    if (registro) {
+        registro.addEventListener('click', (event) => {
+            if (registro.tagName !== 'A') {
+                event.preventDefault();
+            }
+            window.location.href = '/registro';
+        });
+    }
 
-    boton.addEventListener('click', function() {
-        window.location.href = '../app/view/registrarse.php'; 
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const boton = document.getElementById('redirigirInicioSesion');
-
-    boton.addEventListener('click', function() {
-        window.location.href = '../app/view/inicioSesion.php'; 
-    });
+    const inicio = document.getElementById('redirigirInicioSesion');
+    if (inicio) {
+        inicio.addEventListener('click', (event) => {
+            if (inicio.tagName !== 'A') {
+                event.preventDefault();
+            }
+            window.location.href = '/login';
+        });
+    }
 });

@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(180deg, #020617 0%, #0f172a 60%, #1e293b 100%);
+    color: #e2e8f0;
+    min-height: 100vh;
+}
+
+.profile {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+}
+
+.profile__header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.profile__header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.profile__card {
+    background: rgba(15, 23, 42, 0.85);
+    border-radius: 24px;
+    padding: 2.5rem;
+    box-shadow: 0 25px 60px rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(16px);
+}
+
+.profile__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.profile__card label {
+    display: block;
+    font-weight: 600;
+    color: #f8fafc;
+    margin-bottom: 0.5rem;
+}
+
+.profile__card input,
+.profile__card textarea {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border-radius: 14px;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    background: rgba(15, 23, 42, 0.9);
+    color: #f8fafc;
+    resize: vertical;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.profile__card input:focus,
+.profile__card textarea:focus {
+    outline: none;
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25);
+}
+
+.profile__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.profile__actions button {
+    padding: 0.95rem 1.5rem;
+    border-radius: 14px;
+    border: none;
+    background: linear-gradient(135deg, #38bdf8, #6366f1);
+    color: #0f172a;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.profile__actions button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 35px rgba(99, 102, 241, 0.3);
+}
+
+.profile__link {
+    align-self: center;
+    color: #38bdf8;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.profile__link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .profile__card {
+        padding: 1.75rem;
+    }
+}
